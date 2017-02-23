@@ -1,0 +1,40 @@
+
+.board{
+	background: lightblue;
+	width:350px;
+	height:400px;
+}
+
+
+.displaycontainer{
+	text-align: center;
+	background: #F0F8FF;
+	width:250px;
+	margin:0 auto;
+}
+
+
+.editbtn{
+	background: darkblue;
+	width:60px;
+	margin-right: 5px;
+	height:40px;
+	text-align: center;
+	color:white;
+}
+
+.removebtn{
+	background:darkred;
+	width:60px;
+	height: 40px;
+	text-align: center;
+	color:white;
+}
+
+.addnewbtn{
+	background:pink;
+	width:60px;
+	height: 40px;
+	text-align: center;
+	color:white;
+}

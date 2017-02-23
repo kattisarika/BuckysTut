@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+	   <link rel="stylesheet" type="text/css" href="./css/basic.css">
+	   <script  src="./node_modules/react/dist/react.js"></script>
+	   <script  src="./node_modules/react-dom/dist/react-dom.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.14.0/babel.min.js"></script>
+   
+  </head>
+	<body>
+		 <div id="app"></div>
+
+    <script type="text/babel">
+
+      var Event_Example= React.createClass({
+
+         edit:function(){
+         	alert("Clicking Edit Btn");
+         },
+         remove:function(){
+ 			alert("Clicking Remove Btn");
+         },
+
+      	 render:function(){
+      	 	return (
+               <div className="displaycontainer">
+                  <p> {this.props.children} </p>
+                 <button onClick={this.edit} className="editbtn"> Edit </button>
+      	 		 <button onClick={this.remove}  className="removebtn"> Remove </button>
+               </div>
+      	 		);
+      	 }
+      });
+       ReactDOM.render(<div className="board"> <Event_Example > This is first comment</Event_Example> <Event_Example > Lot of Effort</Event_Example> <Event_Example > In the End Its Worth It!</Event_Example></div>, document.getElementById('app'));
+    </script>
+
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+
+   <link rel="stylesheet" type="text/css" href="./css/basic.css">
+    <script  src='./node_modules/react/dist/react.js'> </script>
+    <script  src='./node_modules/react-dom/dist/react-dom.js'> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.14.0/babel.min.js"></script>
+
+   </head>
+
+   <body>
+     <div id="container"></div>
+
+     <script type="text/babel">
+
+        var Checkbox= React.createClass({
+
+        	getInitialState:function(){
+        		return {checked:true}
+
+        	},
+        	handleChecked:function(){
+        	    this.setState({checked:!this.state.checked})
+        	},
+
+        	render: function(){
+        		var msg;
+        		if(this.state.checked){
+        			msg='checked'
+        		}else{
+        			msg='unchecked'
+        		}
+        		return (
+        			<div> 
+        				<input type="checkbox" onChange={this.handleChecked} defaultChecked={this.state.checked} />
+        				<h3> Checkbox is {msg} </h3>
+        			</div>	
+        			);
+        		}
+        });
+
+        ReactDOM.render(<Checkbox />, document.getElementById('container'));
+
+     </script>
+   </body>
+
+</html>
